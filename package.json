@@ -1,0 +1,30 @@
+{
+  "name": "patchboard-api",
+  "description": "Patchboard API reference, tools, and examples",
+  "author": "Matthew King",
+  "version": "0.4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patchboard/patchboard-api"
+  },
+  "bin": {
+    "patchboard": "./bin/patchboard"
+  },
+  "files": [
+    "examples/",
+    "schema.json"
+  ],
+  "scripts": {
+    "prepublish": "rake build"
+  },
+  "dependencies": {
+    "c50n": "0.3.1",
+    "jsck": "~0.1.4",
+    "fairmont": "~0.7.0"
+  },
+  "devDependencies": {
+    "testify": "0.2.9"
+  }
+}
+
+
