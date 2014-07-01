@@ -11,8 +11,11 @@
     "patchboard-api": "./bin/patchboard"
   },
   "files": [
+    "bin/",
+    "src/",
     "examples/",
-    "schema.json"
+    "schema.json",
+    "test_api.json"
   ],
   "scripts": {
     "prepublish": "rake build"
