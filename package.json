@@ -8,7 +8,7 @@
     "url": "https://github.com/patchboard/patchboard-api"
   },
   "bin": {
-    "patchboard": "./bin/patchboard"
+    "patchboard-api": "./bin/patchboard"
   },
   "files": [
     "examples/",
