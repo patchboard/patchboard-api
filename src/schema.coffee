@@ -70,7 +70,7 @@ module.exports =
                       type: "string"
                     authorization:
                       title: "The name of the authorization scheme"
-                      type: "string"
+                      type: ["string", "array"]
                 response:
                   required: true
                   type: "object"
