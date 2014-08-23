@@ -2,28 +2,25 @@
   "name": "patchboard-api",
   "description": "Patchboard API reference, tools, and examples",
   "author": "Matthew King",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/patchboard/patchboard-api"
   },
-  "bin": {
-    "patchboard-api": "./bin/patchboard"
-  },
+  "main": "./src/index.coffee",
   "files": [
-    "bin/",
     "src/",
-    "examples/",
     "schema.json",
-    "test_api.json"
+    "test_api.json",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "prepublish": "rake build"
   },
   "dependencies": {
     "c50n": "0.3.1",
-    "jsck": "~0.1.4",
-    "fairmont": "~0.7.0"
+    "jsck": "~0.1.4"
   },
   "devDependencies": {
     "testify": "0.2.9"

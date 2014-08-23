@@ -1,3 +1,6 @@
+require "starter/tasks/npm"
+require "starter/tasks/npm/release"
+require "starter/tasks/git"
 
 task "build" =>  %w[ schema.json test_api.json ]
 

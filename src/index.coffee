@@ -41,7 +41,9 @@ example =
     
 module.exports =
 
-  validate: (api_file) ->
+  validate: validate
+
+  validate_file: (api_file) ->
     api_file = path.resolve(api_file)
     try
       api = require(api_file)
@@ -67,5 +69,6 @@ module.exports =
       console.log string
     else
       console.log "Unsupported type: #{type}"
+
 
 
