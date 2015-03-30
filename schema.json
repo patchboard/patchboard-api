@@ -73,7 +73,10 @@
                     },
                     "authorization": {
                       "title": "The name of the authorization scheme",
-                      "type": "string"
+                      "type": [
+                        "string",
+                        "array"
+                      ]
                     }
                   }
                 },
