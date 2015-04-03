@@ -1,4 +1,4 @@
-JSCK = require("jsck/src").draft4
+JSCK = require("jsck").draft4
 
 exports.schemas = [
   require("./description/resources"),
