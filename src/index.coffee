@@ -4,7 +4,7 @@ Description = require "./description"
 
 module.exports = class API
 
-  constructor: ({@schema, @resources, @mappings}) ->
+  constructor: ({@schema, @resources, @endpoints}) ->
 
   validate: ->
     errors = []
@@ -23,9 +23,9 @@ module.exports = class API
         schema: error.schema
         document: error.document
 
-    for error in Description.mappings.validate(@mappings).errors
+    for error in Description.endpoints.validate(@endpoints).errors
       errors.push
-        type: "API mappings format"
+        type: "API endpoints format"
         schema: error.schema
         document: error.document
 

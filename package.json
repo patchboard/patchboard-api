@@ -16,7 +16,6 @@
     "LICENSE"
   ],
   "scripts": {
-    "prepublish": "rake build"
   },
   "dependencies": {
     "c50n": "0.3.1",

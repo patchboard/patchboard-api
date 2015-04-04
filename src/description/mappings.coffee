@@ -1,25 +1,21 @@
 module.exports =
-  id: "urn:patchboard.api.mappings#"
+  id: "urn:patchboard.api.endpoints#"
 
   description: "A dictionary of resource descriptions"
   type: "object"
-  additionalProperties: {$ref: "#/definitions/mapping"}
+  additionalProperties: {$ref: "#/definitions/endpoint"}
 
 
   # JSON Schema convention is to keep non-root schema definitions in
   # the #/definitions dictionary.
   definitions:
 
-    mapping:
+    endpoint:
       type: "object"
       additionalProperties: false
+      required: [ "path", "mappings" ]
       properties:
         description:
-          type: "string"
-        resource:
-          description: """
-            The name of the API resource.  Defaults to the name of the mapping.
-          """
           type: "string"
         path:
           description: """
@@ -27,10 +23,22 @@ module.exports =
             templating to indicate parameter interpolation.
           """
           type: "string"
-        query:
-          type: "object"
-          properties:
-            type:
-              enum:
-                ["string", "number", "integer", "boolean", "enum"]
+        mappings:
+          type: "array"
+          minItems: 1
+          items:
+            type: "object"
+            required: [ "resource", "query" ]
+            properties:
+              resource:
+                description: """
+                  The name of the API resource
+                """
+                type: "string"
+              query:
+                type: ["object", "boolean" ]
+                properties:
+                  type:
+                    enum:
+                      ["string", "number", "integer", "boolean", "enum"]
 

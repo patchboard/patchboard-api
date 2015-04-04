@@ -7,5 +7,5 @@ exports.schemas = [
 
 exports.jsck = new JSCK(exports.schemas...)
 exports.resources = exports.jsck.validator("urn:patchboard.api.resources#")
-exports.mappings = exports.jsck.validator("urn:patchboard.api.mappings#")
+exports.endpoints = exports.jsck.validator("urn:patchboard.api.endpoints#")
 
